@@ -116,19 +116,19 @@ const input2 = [3, 2, 1];
 const input3 = [4, 0, 2, 5];
 //output = [0, 40, 0, 0]
 
-function productNoI(array){
-  const newArray = [];
+function productNoI(nums){
+  const products = [];
 
-  for (let i = 0; i < array.length; i++){
+  for (let i = 0; i < nums.length; i++){
     let product = 1;
-    for( let j = 0; j < array.length; j++){
+    for( let j = 0; j < nums.length; j++){
       if (i !== j){
-        product *= array[j];
+        product *= nums[j];
       }
     }
-    newArray[i] = product;
+    products[i] = product;
   }
-  return newArray;
+  return products;
 }
 //this solution is O(n^2) because of the nested loops
 
